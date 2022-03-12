@@ -17,37 +17,3 @@ export const newUser = (id) => {
     });
   })
 }
-
-export const postUser = (userId) => {
-  return new Promise(res, rej) = {
-    client.query(
-      q.Get(q.Ref(q.Collection('user'), userId))
-    )
-    .then((ret) => console.log(ret))
-    .catch((err) => console.error(
-      'Error: [%s] %s: %s',
-      err.name,
-      err.message,
-      err.errors()[0].description,
-    ))
-  }
-}
-
-export const updateUser = (userId) => {
-  return new Promise(res, rej) = {
-    serverClient.query(
-      q.Update(
-        q.Ref(q.Collection('Posts'), '1'),
-        { data: { tags: ['welcome', 'short'] } },
-      )
-    )
-    .then((ret) => console.log(ret))
-    .catch((err) => console.error(
-      'Error: [%s] %s: %s',
-      err.name,
-      err.message,
-      err.errors()[0].description,
-    ))
-  }
-}
-
