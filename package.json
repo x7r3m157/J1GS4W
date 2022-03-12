@@ -9,10 +9,10 @@
   "author": "atlas",
   "license": "MIT",
   "dependencies": {
+    "faunadb": "^4.5.2",
     "netlify-lambda": "^2.0.15"
   },
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/x7r3m157/J1GS4W.git"
