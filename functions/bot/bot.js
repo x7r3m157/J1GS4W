@@ -1,7 +1,5 @@
 const Telegraf = require('telegraf');
 const startAction = require('./actions/start')
-const logTimes = require('./actions/log')
-
 
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
