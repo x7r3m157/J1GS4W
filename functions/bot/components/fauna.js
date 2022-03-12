@@ -8,7 +8,7 @@ export const newUser = (id) => {
     client.query(
       q.Create(
         q.Collection('user'),
-        { data: { userId: id, times: [] } },
+        { data: { userId: id } },
       )
     ).then(ret => {
       res(true)
