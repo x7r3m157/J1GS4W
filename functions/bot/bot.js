@@ -10,6 +10,8 @@ bot.start(ctx => {
 })
 
 bot.hears("log", (ctx) => {
+  ctx.reply('How long did you torture yourself? Tell daddy how long in minutes...');
+
   return logTimes(ctx)
 })
 
