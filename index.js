@@ -88,7 +88,7 @@ const convertTime = (n) => {
 // now were calling the .start() method on our bot, this wakes up our bot to whatever chat or channel we added it to
 bot.start((ctx) => {
     // here we are accessing the context of our bot that we provided as a variable in the method above and calling the command method to respond to initializing the bot with a picture and a caption, J1GS4W makes his lovely intro...
-    ctx.replyWithPhoto({ source: './j1gs4w.jpg' }, { caption : 'BEHOLD, LAZY MEATBAGS!!! I AM J1GS4W!!!! Your friendly evil bot controlling the leaderboard... You put your asses in gear and get to exercising those fluffy bodies of yours. Whenever your finished suffering for the day, say the word "log" and tell me the time in minutes that you looked all sloppy exercising - it can be weightlifting, cardio, whatever the fuck. Im a robot, I only want the numbers.. if I ask for minutes.. just give me minutes you weak bitches. At the end of the day at 8pm I will post the leaderboard at midnight. Dont be a shitty cheating slob and lie about your numbers, nobody actually cares but you - this is just a game, not the fucking olympics. One more thing.. when you update your logs, add @J1GS4Wbot and slide into my DMs.. lets not pollute the memes. Time to suffer mortals.' });
+    ctx.replyWithPhoto({ source: './j1gs4w.jpg' }, { caption : 'BEHOLD, LAZY MEATBAGS!!! I AM J1GS4W!!!! Your friendly evil bot controlling the leaderboard... You put your asses in gear and get to exercising those fluffy bodies of yours. Whenever your finished exercising for the day, say the word "log" and tell me the time in minutes that you looked all sloppy exercising - it can be weightlifting, cardio, whatever the fuck lord vocii tells you what to do. Im a robot, I only want the numbers.. if I ask for minutes.. just give me minutes you weak bitches. One more thing.. when you update your logs, add @J1GS4Wbot and slide into my DMs.. also Im in beta, report errors to lord atlas. Time to suffer mortals.' });
 })
 
 
@@ -112,6 +112,28 @@ bot.hears('Log', (ctx) => {
     return logActivated = true
 
 })
+
+bot.hears('J1GS4W, Who is your daddy?', (ctx) => {
+    if (ctx.update.message.from.username) {
+        ctx.reply('Oh mighty master of the digital frontier, slayer of weakness, leonardo davinci of burger flipping.. you are my my daddy!!! ')
+    } else {
+        ctx.reply('The mighty master of the digital frontier, slayer of weakness, leonardo davinci of burger flipping.. atlas is my daddy.')
+    }
+})
+
+bot.hears('J1GS4W, wanna snuggle?', (ctx) => {
+    if (ctx.update.message.from.username) {
+        ctx.reply('Yes. I wanna be the little spoon, daddy.')
+    } 
+})
+
+bot.hears('J1GS4W, do you love me?', (ctx) => {
+    if (ctx.update.message.from.username) {
+        ctx.reply('More than anything.. I would bathe in the blood of your enemies for you daddy. ')
+    } 
+})
+
+
 
 // here were taking our database object instance and assigning a variable named data, then we are calling a getData method which pulls the whole database
 // at the root of the JSON object. This is important because we both need to get stuff out of our database in order to manipulate data and put it back in the database
@@ -188,7 +210,7 @@ bot.on('message', (ctx) => {
             `${ctx.update.message.text}... Cue the rocky theme song!`,
             `Holy fucking sweet baby jesus ${ctx.update.message.text} minutes, someone get this guy a medal.`,
             `You did it, ${ctx.update.message.text} minutes, your life is complete.. I will arange the parade.`,
-            `${ctx.update.message.text} minutes?! Now go my human puppet, you are ready to assasinate Putin.`
+            `${ctx.update.message.text} minutes?! Now go my human puppet, test your strength.. get yourself into a fist fight by peeing on the strongest dude walking out of the gym.`
         ]
 
         // we want the bot to only push the users response to the database if its an integer. We need to correct the user and teach them how to enter info if they 
